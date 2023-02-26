@@ -1,12 +1,14 @@
 using BooksListWeb.Data;
 using Microsoft.EntityFrameworkCore;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddDbContext<BooksDBContext>(o => o.UseSqlite(@"Server=localhost;TrustServerCertificate=True;User Id=LAPTOP-5LC5ROF4\Uczen;IntegratedSecurity=true;Initial catalog=Library;Connection Timeout=4;"));
-//
+
+builder.Services.AddDbContext<BooksDBContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("LibraryDBConnectionString")));
+//Server=localhost;TrustServerCertificate=True;User Id=LAPTOP-5LC5ROF4\Uczen;IntegratedSecurity=true;Initial catalog=Library;Connection Timeout=4;
 
 var app = builder.Build();
 
