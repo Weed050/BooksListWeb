@@ -15,6 +15,9 @@
     }*@
     <label for="Books">Wykaz książek:</label>
     <select name="Books">
+        <option value="addBook">
+            <a >Add Book</a>
+        </option>
         @foreach (var item in Model.Books)
         {
             <option value="@item">
