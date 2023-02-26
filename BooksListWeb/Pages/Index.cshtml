@@ -4,7 +4,23 @@
     ViewData["Title"] = "Books";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div >
+   @* @if (Model.OnGet)
+    {
+        <p class="text-center"> No books available</p>
+    }
+    else
+    {
+        
+    }*@
+    <label for="Books">Wykaz książek:</label>
+    <select name="Books">
+        @foreach (var item in Model.Books)
+        {
+            <option value="@item">
+                @item.BookID+". "+@item.BookName+" Autor nr "+@item.AuthorsID
+            </option>
+        }
+       
+    </select>
 </div>
