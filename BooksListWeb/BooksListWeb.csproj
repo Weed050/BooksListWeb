@@ -14,4 +14,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\Database\" />
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

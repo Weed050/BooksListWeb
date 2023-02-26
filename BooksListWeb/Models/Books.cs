@@ -7,7 +7,7 @@ namespace BooksListWeb.Models
         [Key]
         public int BookID { get; set; }
         public string? BookName { get; set; }
-        public Authors? AuthorID { get; set; }
+        public Authors? AuthorsID { get; set; }
       
     }
 }
