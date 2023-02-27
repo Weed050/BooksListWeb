@@ -13,17 +13,25 @@
     {
         
     }*@
-    <label for="Books">Wykaz książek:</label>
-    <select name="Books">
-        <option value="addBook">
-            <a >Add Book</a>
-        </option>
-        @foreach (var item in Model.Books)
-        {
-            <option value="@item">
-                @item.BookID+". "+@item.BookName+" Autor nr "+@item.AuthorsID
+    @if (Model.Books == null)
+    {
+        <p>No books available</p>
+    }
+    else
+    {
+        <label for="Books">Wykaz książek:</label>
+        <select name="Books">
+            <option value="Books">
+                Books
             </option>
-        }
-       
-    </select>
+            @foreach (var item in Model.Books)
+            {
+                <option value="@item">
+                    @item.BookID+". "+@item.BookName+" Autor nr "+@item.AuthorsID
+                </option>
+            }
+
+        </select>
+    }
+  
 </div>

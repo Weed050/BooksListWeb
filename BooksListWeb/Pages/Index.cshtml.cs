@@ -20,7 +20,7 @@ namespace BooksListWeb.Pages
         public IList<Books> Books { get; set; } 
         public async void OnGet() // handler method; OnPost OnGet - HTTP request
         {
-           // Books = await _context.Books.ToListAsync();
+       
            Books = await  _context.Books.ToListAsync();
             
         }
