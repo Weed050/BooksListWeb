@@ -33,7 +33,7 @@
                     @foreach (var item in Model.Books)
                      {
                          <li class="dropdown-item">
-                            @item.BookID+". "+@item.BookName+" Autor nr "+@item.AuthorsID
+                            @item.BookID @item.BookName Autor nr @item.AuthorsID
                          </li>
                      }
             </ul>   
