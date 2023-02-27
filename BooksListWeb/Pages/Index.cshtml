@@ -23,6 +23,9 @@
         
         <label for="Books">List of Books:</label>
         <ul>
+            <li class="dropdown-item">
+                <a href="./Admin/Books/Adding" class="dropdown-item">+ Add new book</a>
+            </li>
             @foreach (var item in Model.Books)
             {
 
@@ -30,12 +33,13 @@
                     @item.BookID @item.BookName 
                 </li>
             }
-            <li>
-                <a href="./Admin/Books/Adding">Add new book</a>
-            </li>
+           
         </ul>
             <label for="Authors">List of Authors:</label>
             <ul>
+            <li class="dropdown-item">
+                <a href="./Admin/Authors/Adding" class="dropdown-item">+ Add new author</a>
+            </li>
             @foreach (var item2 in Model.Authors)
             {
 
@@ -43,9 +47,6 @@
                     @item2.AuthorID @item2.AuthorName 
                         </li>
             }
-            <li>
-                <a href="./Admin/Authors/Adding"> Add new author</a>
-            </li>
             </ul>
 
     }
