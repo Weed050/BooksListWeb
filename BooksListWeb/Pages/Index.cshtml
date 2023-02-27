@@ -4,25 +4,30 @@
     ViewData["Title"] = "Books";
 }
 
-<div >
-   @* @if (Model.OnGet)
+<div class="container">
+    @* @if (Model.OnGet)
     {
-        <p class="text-center"> No books available</p>
+    <p class="text-center"> No books available</p>
     }
     else
     {
-        
+
     }*@
     @if (Model.Books == null)
     {
         <p>No books available</p>
-       @* <a href="./Admin/Books/Adding">Add new book</a>*@
+        @* <a href="./Admin/Books/Adding">Add new book</a>*@
     }
     else
     {
-        
-        <label for="Books">List of Books:</label>
-        <ul>
+
+        //Books List
+        <h1>List of Books:</h1>
+
+        <p class="dropdown-toggle" data-bs-toggle="dropdown" role="button">Books </p>
+
+        <ul class="dropdown-menu">
+
             <li class="dropdown-item">
                 <a href="./Admin/Books/Adding" class="dropdown-item">+ Add new book</a>
             </li>
@@ -30,25 +35,31 @@
             {
 
                 <li class="dropdown-item">
-                    @item.BookID @item.BookName 
+                    @item.BookID @item.BookName
                 </li>
             }
-           
         </ul>
-            <label for="Authors">List of Authors:</label>
-            <ul>
-            <li class="dropdown-item">
-                <a href="./Admin/Authors/Adding" class="dropdown-item">+ Add new author</a>
-            </li>
-            @foreach (var item2 in Model.Authors)
-            {
 
-                        <li class="dropdown-item">
-                    @item2.AuthorID @item2.AuthorName 
-                        </li>
-            }
+
+                //Authors List
+        <h2>List of Authors:</h2>
+            <p class="dropdown-toggle" data-bs-toggle="dropdown" role="button">Authors</p>
+
+            <ul class=" dropdown-menu">
+                <li class="dropdown-item">
+                    <a href="./Admin/Authors/Adding" class="dropdown-item ">+ Add new author</a>
+                </li>
+
+
+                @foreach (var item2 in Model.Authors)
+                {
+
+                    <li class="dropdown-item">
+                        @item2.AuthorID @item2.AuthorName
+                    </li>
+                }
             </ul>
 
     }
-  
+
 </div>
