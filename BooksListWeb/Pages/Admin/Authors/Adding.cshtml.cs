@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace BooksListWeb.Pages.Admin.Authors
+namespace BooksListWeb.Pages.Admin.Books
 {
     public class AddingModel : PageModel
     {

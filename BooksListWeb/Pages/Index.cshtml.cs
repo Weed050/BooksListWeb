@@ -18,11 +18,14 @@ namespace BooksListWeb.Pages
         }
         //public IList<Books> Books { get; set; }
         public IList<Books> Books { get; set; }
+        public IList<Authors> Authors { get; set; }
+
         public async Task OnGet() // handler method; OnPost OnGet - HTTP request
         {
 
             //var xxx = await _context.Books.ToListAsync();
             Books = await _context.Books.ToListAsync();
+            Authors = await _context.Authors.ToListAsync();
 
 
         }

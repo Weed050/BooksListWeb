@@ -20,25 +20,34 @@
     }
     else
     {
+        
         <label for="Books">List of Books:</label>
         <ul>
-            <li class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" id="BooksListDropdown">
-                Books
-            </li>
+            @foreach (var item in Model.Books)
+            {
+
+                <li class="dropdown-item">
+                    @item.BookID @item.BookName 
+                </li>
+            }
             <li>
-                <ul class="dropdown-menu"> 
-                    <li>
-                        <a class="dropdown-item" href="./Admin/Books/Adding">Add Book</a>
-                    </li>
-                    @foreach (var item in Model.Books)
-                     {
-                         <li class="dropdown-item">
-                            @item.BookID @item.BookName Autor nr @item.AuthorsID
-                         </li>
-                     }
-            </ul>   
+                <a href="./Admin/Books/Adding">Add new book</a>
             </li>
         </ul>
+            <label for="Authors">List of Authors:</label>
+            <ul>
+            @foreach (var item2 in Model.Authors)
+            {
+
+                        <li class="dropdown-item">
+                    @item2.AuthorID @item2.AuthorName 
+                        </li>
+            }
+            <li>
+                <a href="./Admin/Authors/Adding"> Add new author</a>
+            </li>
+            </ul>
+
     }
   
 </div>
