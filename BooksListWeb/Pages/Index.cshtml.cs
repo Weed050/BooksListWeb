@@ -23,6 +23,7 @@ namespace BooksListWeb.Pages
        
            Books = await  _context.Books.ToListAsync();
             
+            
         }
        
     }
