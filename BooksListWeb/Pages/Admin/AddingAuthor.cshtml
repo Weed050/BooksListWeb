@@ -1,0 +1,18 @@
+﻿@page
+@model BooksListWeb.Pages.Admin.AddingModel
+@{
+    ViewData["Title"] = "Adding Author";
+}
+
+<h1>
+    Add new Author:
+</h1>
+<form method="post">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Type in name of the Author:</label>
+        <input type="text" class="form-control" id="BookName" name="BookName"  >
+    </div>
+    <label for="disabledSelect" class="form-label">Disabled select menu</label>
+   
+    <a type="submit" href="/" class="btn btn-primary">Submit</a>
+</form>

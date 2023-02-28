@@ -1,0 +1,27 @@
+﻿@page
+@model BooksListWeb.Pages.Admin.AddingModel
+@{
+    ViewData["Title"] = "Adding Books";
+}
+
+<h1>
+    Add new Book:
+</h1>
+<form method="post">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Type in name of the book:</label>
+        <input type="text" class="form-control" id="BookName" name="BookName" asp-for="BookName" >
+    </div>
+    <label for="disabledSelect" class="form-label">Disabled select menu</label>
+    <select id="disabledSelect" class="form-select" name="selectAuthor" asp-for="selectAuthor">
+       @* @foreach (var item2 in )
+        {
+
+            <section> @item2.AuthorID @item2.AuthorName</section>
+
+                       
+        }
+    *@
+    </select>
+    <a type="submit" href="/" class="btn btn-primary">Submit</a>
+</form>

@@ -14,7 +14,7 @@ namespace BooksListWeb.Pages
         private readonly BooksDBContext _context; // read only 
         public IndexModel(BooksDBContext context)
         {
-            _context = context;
+            _context = context; 
         }
         //public IList<Books> Books { get; set; }
         public IList<Books> Books { get; set; }
