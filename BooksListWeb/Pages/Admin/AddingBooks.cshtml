@@ -12,8 +12,8 @@
         <label for="exampleInputEmail1" class="form-label">Type in name of the book:</label>
         <input type="text" class="form-control" id="BookName" name="BookName" asp-for="BookName" >
     </div>
-    <label for="disabledSelect" class="form-label">Disabled select menu</label>
-    <select id="disabledSelect" class="form-select" name="selectAuthor" asp-for="selectAuthor">
+    <label for="selectAuthor" class="form-label">Select author from the list:</label>
+    <select id="selectAuthor" class="form-select" name="selectAuthor" asp-for="selectAuthor">
        @* @foreach (var item2 in )
         {
 
@@ -24,4 +24,6 @@
     *@
     </select>
     <a type="submit" href="/" class="btn btn-primary">Submit</a>
+    <a href="/Admin/AddingBooks" class="btn">+ Add new book</a>
+    <a href="/Admin/AddingAuthor" class="btn">+ Add new author</a>
 </form>
