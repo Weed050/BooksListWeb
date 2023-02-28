@@ -10,13 +10,12 @@
 <form method="post">
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Type in name of the book:</label>
-        <input type="text" class="form-control" id="BookName" name="BookName"  >
+        <input type="text" class="form-control" id="BookName" name="BookName" asp-for="AddBookRecord.BookName"  >
     </div>
-    @*asp-for="selectAuthor"*@
-    @*asp-for="BookName"*@
+   
 
     <label for="selectAuthor" class="form-label">Select author from the list:</label>
-    <select id="selectAuthor" class="form-select form-select-lg mb-3" name="selectAuthor">
+    <select id="selectAuthor" class="form-select form-select-lg mb-3" name="selectAuthor" asp-for="AddBookRecord.AuthorsID">
         <option selected> Select Author</option>
         @foreach (var item2 in Model.Authors)
         {

@@ -1,5 +1,6 @@
 using BooksListWeb.Data;
 using BooksListWeb.Models;
+using BooksListWeb.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +13,8 @@ namespace BooksListWeb.Pages.Admin
         private readonly BooksDBContext _context;
         public AddingModel(BooksDBContext context)=> _context= context;
 
+        [BindProperty]
+        public AddWhatFormContainsBook AddBookRecord { get; set; }
         //[BindProperty]
         //public string? BookName { get; set; }
         //[BindProperty]
