@@ -9,11 +9,14 @@ namespace BooksListWeb.Pages.Admin
 {
     public class AddingModel : PageModel
     {
-        [BindProperty]
-        public string? BookName { get; set; }
-        [BindProperty]
-        public string? selectAuthor { get; set; }
-        public IList<Authors>? Authors { get; set; }
+        private readonly BooksDBContext _context;
+        public AddingModel(BooksDBContext context)=> _context= context;
+
+        //[BindProperty]
+        //public string? BookName { get; set; }
+        //[BindProperty]
+        //public string? selectAuthor { get; set; }
+        //public IList<Authors>? Authors { get; set; }
 
         //public async Task OnGet() 
         //{
@@ -21,9 +24,11 @@ namespace BooksListWeb.Pages.Admin
 
 
         //}
-        public void OnGet()
+        public IList<Authors> Authors { get; set; } = new List<Authors>();
+        public async Task OnGet()
         {
-           
+           Authors = await _context.Authors.ToListAsync();
         }
+        
     }
 }
