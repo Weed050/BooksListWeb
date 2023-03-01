@@ -1,5 +1,5 @@
 ﻿@page
-@model BooksListWeb.Pages.Admin.AddingModel
+@model BooksListWeb.Pages.Admin.AddingModel2
 @{
     ViewData["Title"] = "Adding Author";
 }
@@ -10,7 +10,7 @@
 <form method="post">
     <div class="mb-3">
         <label for="AuthorName" class="form-label">Type in name of the Author:</label>
-        <input type="text" class="form-control" id="AuthorName"  >
+        <input type="text" class="form-control" id="AuthorName" required asp-for="AddAuthorRecord.AuthorName" >
     </div>
    
    

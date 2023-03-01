@@ -8,10 +8,10 @@ using System.Linq;
 
 namespace BooksListWeb.Pages.Admin
 {
-    public class AddingModel : PageModel
+    public class AddingModel1 : PageModel
     {
         private readonly BooksDBContext _context;
-        public AddingModel(BooksDBContext context)=> _context= context;
+        public AddingModel1(BooksDBContext context)=> _context= context;
 
         [BindProperty]
         public AddWhatFormContainsBook AddBookRecord { get; set; }

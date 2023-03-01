@@ -1,5 +1,5 @@
 ﻿@page
-@model BooksListWeb.Pages.Admin.AddingModel
+@model BooksListWeb.Pages.Admin.AddingModel1
 @{
     ViewData["Title"] = "Adding Books";
 }
@@ -10,12 +10,12 @@
 <form method="post">
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Type in name of the book:</label>
-        <input type="text" class="form-control" id="BookName" name="BookName" asp-for="AddBookRecord.BookName"  >
+        <input required type="text" class="form-control" id="BookName" name="BookName" asp-for="AddBookRecord.BookName"  >
     </div>
    
 
     <label for="selectAuthor" class="form-label">Select author from the list:</label>
-    <select id="selectAuthor" class="form-select form-select-lg mb-3" name="selectAuthor" asp-for="AddBookRecord.AuthorsID">
+    <select required id="selectAuthor" class="form-select form-select-lg mb-3" name="selectAuthor" asp-for="AddBookRecord.AuthorsID">
         <option selected> Select Author</option>
         @foreach (var item2 in Model.Authors)
         {
