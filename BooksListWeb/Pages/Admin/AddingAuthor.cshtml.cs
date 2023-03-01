@@ -7,9 +7,9 @@ using BooksListWeb.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
-namespace BooksListWeb.Pages.Admin.Books
+namespace BooksListWeb.Pages.Admin
 {
-    public class AddingModel : PageModel
+    public class AddingModel2 : PageModel
     {
         [BindProperty]
         public AddWhatFormContainsAuthor AddAuthorRecord { get; set; }
