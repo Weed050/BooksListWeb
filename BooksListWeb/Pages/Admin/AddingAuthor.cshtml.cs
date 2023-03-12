@@ -1,11 +1,13 @@
 using BooksListWeb.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Web;
 
 using BooksListWeb.Data;
 using BooksListWeb.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using Microsoft.Identity.Client;
 
 namespace BooksListWeb.Pages.Admin
 {
@@ -23,7 +25,7 @@ namespace BooksListWeb.Pages.Admin
         {
             _booksDBContext = BooksDBContext;
         }
-        public void OnPost()
+        public Task OnPost()
         {
             var NewRegistration1 = new Authors()
             {
@@ -33,7 +35,13 @@ namespace BooksListWeb.Pages.Admin
 
             _booksDBContext.Authors.Add(NewRegistration1);
             _booksDBContext.SaveChanges();
-
+            //string urlHome = "/Admin/AddingAuthor";
+            //ActionResult MyAction(string url)
+            //{
+            //    return Redirect(url);
+            //}
+            //MyAction(urlHome);
+            return Task.CompletedTask;
         }
     }
 }

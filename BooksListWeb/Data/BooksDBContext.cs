@@ -12,5 +12,11 @@ namespace BooksListWeb.Data
         public DbSet<Books> Books { get; set; }
         public DbSet<Authors> Authors { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            //modelBuilder.ApplyConfiguration();
+        }
+
     }
 }

@@ -12,9 +12,12 @@
         <label for="AuthorName" class="form-label">Type in name of the Author:</label>
         <input type="text" class="form-control" id="AuthorName" required asp-for="AddAuthorRecord.AuthorName" >
     </div>
-
-    <button class="btn btn-info" >Submit</button>
+   
+    @*<a href="/Admin/AddingAuthor" class="btn btn-primary" type="submit">
+        <input type="submit" class="btn btn-primary" value="Send"/>
+    </a>*@
+    <button class="btn btn-info" id="HomePage">Submit</button>
    @* <button type="submit" href="/" class="btn btn-primary">Submit</button>*@
-    <button type="submit" href="/Admin/AddingBooks" class="btn">+ Add new book</button>
-    <button type="submit" href="/Admin/AddingAuthor" class="btn">+ Add new author</button>
+    <button type="submit" href="/Admin/AddingBooks" id="books" class="btn">+ Add new book</button>
+    <button type="submit" href="/Admin/AddingAuthor" id="author" class="btn">+ Add new author</button>
 </form>
